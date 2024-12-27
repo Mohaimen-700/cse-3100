@@ -1,32 +1,134 @@
+/* Base Layout Styling */
 .layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
 }
 
 header {
-  padding: 1em;
+  background-color: #ffffff;
+  border-bottom: 2px solid #ddd;
+  padding: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+header .nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header .nav-item {
+  margin: 0 1em;
+}
+
+header .nav-link {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+header .nav-link:hover {
+  color: #0056b3;
 }
 
 main {
   flex: 1;
-  padding: 1em;
+  padding: 2em;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 1em auto;
+  max-width: 900px;
 }
+
 footer {
   padding: 1em;
   text-align: center;
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+  color: #555;
 }
 
+/* Cat Card Styling */
 .cat-card {
   border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #ffffff;
   text-align: center;
-  height: 250px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cat-card img {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .cat-info {
   background: #f8f9fa;
+  border-radius: 0 0 8px 8px;
+  padding: 1em;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.cat-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
+.cat-info p {
+  margin: 0.2em 0;
+  color: #555;
+}
+
+/* Filters Styling */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.filters input[type='text'],
+.filters select {
+  padding: 0.5em;
+  border: 1px solid #ddd;
   border-radius: 4px;
+  width: 48%;
+  font-size: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filters input[type='text']:focus,
+.filters select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
